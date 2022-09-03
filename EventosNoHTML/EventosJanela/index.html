@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-Janela</title>
+
+    <script>
+        function aoRedimencionarJanela() {
+            console.log('janela Redimencionada!');
+        }
+
+        function scroll() {
+            console.log('janela foi scroll');
+        }
+    </script>
+
+</head>
+
+<!-- on resize é um evento expecifico do body já o onscroll não -->
+<body onresize="aoRedimencionarJanela()" onscroll="scroll()">
+
+    <div style="background-color: grey; width: 400px;">
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+        <h1>REDIMENCIONE OU SCROLLE A PAGINA</h1>
+        <span>Uma mensagem sera exibida no console!</span>
+    </div>
+
+</body>
+</html>

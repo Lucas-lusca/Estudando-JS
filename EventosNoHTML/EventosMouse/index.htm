@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-Mouse</title>
+
+    <script>
+
+        // === Cada uma dessas funções, vão ser chamadas por eventos no HTML ===
+
+        function aoClickar() {
+            alert('O evento: ao clickar, foi acionado!');
+        }
+        
+        function duploClick() {
+            alert('O evento: duplo click, foi acionado!');
+        }
+
+        function soltouClick() {
+            alert('O evento: soltou click, foi acionado');
+        }
+
+        function comMouseSobre() {
+            alert('O evento: com o mouse sobre, foi acionado!');
+        }
+
+        function mouseSaiu() {
+            alert('O evento: mouse saiu, foi acionado!');
+        }
+        
+    </script>
+
+</head>
+<body style="display: flex;">
+
+    <!-- ESSES EVENTOS SÃO BASTANTE IMPORTANTES!! -->
+    <div onclick="aoClickar()" style="background-color: red; width: 120px; height: 120px; margin: 15px;">CLICKE</div>
+    <div ondblclick="duploClick()" style="background-color: green; width: 120px; height: 120px; margin: 15px;">CLICKE DUAS VEZES</div>
+    <div onmouseup="soltouClick()" style="background-color: blue; width: 120px; height: 120px; margin: 15px;">CLICKE E SOLTE</div>
+    <div onmouseover="comMouseSobre()" style="background-color: orange; width: 120px; height: 120px; margin: 15px;">COLOQUE O MOUSE SOBRE</div>
+    <div onmouseout="mouseSaiu()" style="background-color: palevioletred; width: 120px; height: 120px; margin: 15px;">COLOQUE O MOUSE SOBRE E RETIRE DEPOIS</div>
+
+    <div onclick="aoClickar()"
+        ondblclick="duploClick()"
+        onmouseup="soltouClick()"
+        onmouseover="comMouseSobre()"
+        onmouseout="mouseSaiu()" 
+        style="background-color: violet; width: 120px; height: 120px; margin: 150px;">
+        TODAS AS ANTERIORES
+    </div>
+
+</body>
+</html>

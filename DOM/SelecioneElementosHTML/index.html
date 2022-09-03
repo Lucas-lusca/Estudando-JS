@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecione-Elementos-HTML</title>
+</head>
+<body>
+
+    <h1>Selecionando os Inputs no JS. Uma mensagem será printada no console</h1>
+    
+    <input type="text" placeholder="Por ID"     id="porID">
+    <input type="text" placeholder="Por Tag"    tag="porTag">
+    <input type="text" placeholder="Por classe" class="porClasse">
+    <input type="text" placeholder="Por Nome"   Nome="porNome">
+
+    <!-- A tag script deve ser colocada no final pois a elementos que serão chamado
+        os quais ainda não existem caso a tag estivesse no head -->
+    <script>
+        console.log(document.getElementById('porID') + 'ID');
+        console.log(document.getElementsByTagName('porTag') + 'TAG');
+        console.log(document.getElementsByClassName('porClasse') + 'CLASSE');
+        console.log(document.getElementsByName('porNome') + 'NOME');
+    </script>
+</body>
+</html>

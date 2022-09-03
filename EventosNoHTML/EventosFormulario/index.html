@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-Formulario</title>
+
+    <script>
+        
+        function noFoco() {
+            console.log('Esta no foco');
+        }
+
+        function perdeuFoco() {
+            console.log('Perdeu o foco');
+        }
+
+        function estadoModificado() {
+            console.log('O estado foi modificado');
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>Uma mensagem será printada no console!!</h1>
+
+    <input onfocus="noFoco()" onblur="perdeuFoco()" type="text" placeholder="Selecione e des-Selecione">
+
+    <select onchange="estadoModificado()">
+        <option value="0">Valor 0</option>
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+    </select>
+</body>
+</html>

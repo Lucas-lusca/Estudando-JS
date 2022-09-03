@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando-Valores-Input</title>
+
+    <script>
+
+        // Esta função é chamada toda vez que a tecla sobe, a strig passado no input
+        // é verificada, se for numero vai para um lugar, caso for letra vai para outro.
+        
+        function separadorCaracters() {
+            // value retor o valor
+            // Pegando o valor do input do ID 'digitador'
+            var caracter = document.getElementById('digitador').value;
+
+            // Podemos passar valor tambem por meio do value
+            document.getElementById('digitador').value = '';
+
+
+            caracter.trim();
+
+            // === AVISO ESTA MANEIRA DA PROBLEMA ===
+            // Dessa maneira funciona, mas caso escrevermos rapido, a string não entra em
+            // nenhum case, ex: 1232, o codigo entende como 12 ou 32, não a case para isso.
+            
+            // switch (caracter) {
+            //     case '0':
+            //     case '1':
+            //     case '2':
+            //     case '3':
+            //     case '4':
+            //     case '5':
+            //     case '6':
+            //     case '7':
+            //     case '8':
+            //     case '9':
+            //         document.getElementById('numero').value += caracter;
+            //         break;
+            
+            //     default:
+            //         document.getElementById('texto').value += caracter;
+            // }
+
+
+
+            // === AVISO ESTA MANEIRA AINDA DA PROBLEMA ===
+            // Desta maneira utilizamos o isNaN() que verifica se a strig passada pelo
+            // input é ou não um numero, com isso conseguimos evitar um pouco
+            // o problema da maneira anterior, onde se você escrever rapido a string
+            // pode não entrar em nenhuma case, fazendo a caracter ir para o lugar errado.
+            if (isNaN(caracter)) {
+                document.getElementById('texto').value += caracter;
+            }else{
+                document.getElementById('numero').value += caracter;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1> Não esta 100% funcional </h1>
+    <input  type="text" 
+            placeholder="Digite sua frase aqui"  
+            onkeyup="separadorCaracters()"
+            id="digitador">
+    <br>
+    <input type="text" placeholder="Texto" disabled id="texto">
+    <input type="text" placeholder="Numero" disabled id="numero">
+</body>
+</html>

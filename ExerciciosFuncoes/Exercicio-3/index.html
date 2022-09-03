@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções-Anonimas</title>
+
+    <script>
+
+        // === Lembre depois de passar os parametros para essa função!!! ===
+        function acerto(aoAcertar, aoErrar) {
+            if(false){
+                // Você esta passando o valor 'Voce acertou!! e Parabens' para
+                // os parametros da função aoAcertar e aoErrar!!!
+                // la esses valores estão sendo "printados"
+                aoAcertar('Você acertou!!', ' Parabens!!');
+            }else{
+                aoErrar('Você errou :(');
+            }
+        }
+
+        // Uma função anonima é uma variavel que recebe uma função
+        // Ela é utilizada para passar uma função como parametro para outra função
+        // ==== APRENDA ISSO!!! ====
+        var aoAcertar = function(frase, parabens) {
+            document.write(frase, parabens);
+        }
+
+        var aoErrar = function(frase) {
+            document.write(frase);
+        }
+
+        // Você precisa passar as variaveis(que tambem são funções) para a função!!!
+        // Aqui acerto esta sendo chamada e recebendo as variaveis/funções!!
+        acerto(aoAcertar, aoErrar);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

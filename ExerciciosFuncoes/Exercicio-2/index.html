@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções-como-parametros</title>
+
+    <script>
+
+        // === É possivel enviar funções como parametros para outras funções!!! ===
+
+
+        // Essa função recebe um id, uma função callBackSucesso e outra função callBackErro
+        // Ela passa o valor 'GG' e 'Ganhamo' para a callBackSucesso e 'F' para a outra
+        function exibirArtigo(id, callBackSucesso, callBackErro) {
+            if(true){
+                callBackSucesso('GG', 'Ganhamo!');
+            }else{
+                callBackErro('F');
+            }
+        }
+
+        // Essa função anonima, escreve o que é passado como valor 'titulo' e 'descrição'
+        var callBackSucesso = function(titulo, descrição){
+            document.write('<h1>' + titulo + '</h1>');
+            document.write('<hr/>');
+            document.write('<p>' + descrição + '</p>')
+        }
+        var callBackErro = function(erro){
+            document.write('<p>' + erro + '</p>');
+        }
+
+        exibirArtigo(1, callBackSucesso, callBackErro);
+                        // Sem parênteses para passar a função,
+                        // caso tivesse, ia ser executada a função.
+                        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
