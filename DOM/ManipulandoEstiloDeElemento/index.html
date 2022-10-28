@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando-Estilo-Elemento</title>
+
+    <script>
+
+        // Esta função esta recebendo como parametro as variaveis que são enviadas
+        // pelos botões por meio do evento ao ser clickado
+
+        function trocaCor(cor, h, w) {
+            // style pega o estilo css do item desejado
+            document.getElementById('bloco').style.backgroundColor = cor;
+            document.getElementById('bloco').style.height = h;
+            document.getElementById('bloco').style.width = w;
+            // Veja mais em https://www.w3schools.com/js/default.asp
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <span>Troque a cor:</span>
+    <br>
+    <br>
+    <!-- Passando para a função a cor desejada -->
+    <button type="button" onclick="trocaCor('#ff0000', '200px', '200px')">vermelho</button>
+    <button type="button" onclick="trocaCor('#00ff00', '', '300px')">verde</button>
+    <button type="button" onclick="trocaCor('#0000ff', '150px')">azul</button>
+    <hr>
+    <br>
+    <div style="width: 200px; height: 200px; border: 2px solid black;" id="bloco"> EU SOU O BLOCO</div>
+</body>
+</html>

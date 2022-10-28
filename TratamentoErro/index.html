@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento-Erro</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var listaFilmes = Array();
+
+        // Foi criado um array dentro do indice 1 do array listaFilmes
+        // Nesse array criado foi criado um indice nome e tempo
+        listaFilmes[1] = Array();
+        listaFilmes[1]['nome'] = 'Gravity falls';
+        listaFilmes[1]['tempo'] = 30.0;
+
+        // Tratamento de erro === IMPORTANTE ===
+        function getMove(listaFilmes) {
+            try {
+                document.write(listaFilmes[0]['nome']);
+            } catch (error) {
+                enviarParaSuporte(error);
+            }
+        }
+
+        function enviarParaSuporte(erro) {
+            document.write('Erro enviado para o suporte: ' + erro + '<br><hr>');
+        }
+
+        getMove(listaFilmes);
+
+        // throw envia uma mensagem de erro customizada
+        throw new Error(document.write('Teste throw'));
+
+    </script>
+
+</body>
+</html>

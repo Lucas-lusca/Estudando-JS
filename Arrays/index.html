@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title> <!-- Ui ui, complicado -->
+</head>
+<body>
+    
+    <h1>Trabalhando com arrays:</h1>
+
+    <div class="div1">
+
+    </div>
+
+    <div class="div2">
+
+    </div>
+
+    <script>
+        var listaFrutas = Array('Banana', 'Maça', 'Uva');
+        
+        // Adiciona elemento no inicio do array
+        listaFrutas.unshift('Maracuja');
+
+        // === Adiciona elemento no final do array ===
+        listaFrutas.push('Manga');
+
+        // // Remove o ultimo elemento do array
+        // listaFrutas.pop();
+
+        // // Remove o primeiro elemento do array
+        // listaFrutas.shift();
+        
+        document.write("<h3>" + listaFrutas + "</h3> <hr>");
+        
+
+        // =================================================
+
+
+        var listaCoisas = [];
+        
+        // É possivel colocar arrays dentro de arrays
+        // Estamos adiocionando um array dentro de outro array
+        listaCoisas.push(listaObjetos = Array())
+        listaCoisas.push(listaFrutas);
+
+        listaObjetos.push('Martelo', 'Fone');
+        
+        // Estamos colocando no documento os indices dentro do array listaCoisas
+        document.write("<h1>Array dentro de outro array:</h1> <h3>" + listaCoisas + "</h3> <hr>");
+
+
+        // =================================================
+
+
+        // === indexOf procura um elemento no array, caso não ache retorna -1 ===
+        var indice = listaFrutas.indexOf('Uva');
+
+        document.write("<h1>Verificando onde esta um valor no array:</h1>");
+
+        if(indice === -1){
+            document.write("Este elemento NÃO existe, o valor retornado é: " + indice);
+        }else if(indice){
+            document.write("Este elemento EXISTE e esta no indice: " + indice)
+        }
+
+    </script> 
+
+</body>
+</html>
